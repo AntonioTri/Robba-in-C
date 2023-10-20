@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Progetto Autoscontri Tridente Antonio(movimenti direzionali)</title>
+    <style>
+        .immagini {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+    
+        .immagine {
+          margin-bottom: 20px;
+    
+        }
+        body {
+          font-family: "Comic Sans MS", sans-serif;
+          background-repeat: no-repeat;
+          background-position: top left;
+          background-size: cover;
+          background-attachment: fixed;
+          color: rgb(195, 189, 214);
+          text-align: center;
+        }
+      </style>
+</head>
+<body background="foto/Background.png">
+    <h1>Procedure: <span style="color: cornflowerblue; font-weight: bold;">"Movimenti direzionali"</span></h1>
+    <br>
+    <p style="font-size: 110%;">Troveremo in questa pagina 5 funzioni, 4 saranno molto simili tra loro,<br>
+        una invece, quella per i movimenti della macchina numero 4, necessiterà di maggiorni spiegazioni.</p>
+        <br>
+        <div>
+            <p style="font-size: 110%;"><span style="font-weight: bold;">Iniziamo dalle 4 per i movimenti direzionali</span>, il concetto di base è
+                uguale per tutte, esiste una sorta di "caso base", quello in cui il movimento direzionale<br> è permesso, e tre sottocasi,
+                i due angoli caratteristici della direzione(se il movimento è a sinistra ad esempio, gli angoli sono in alto a sinistra ed in basso a sinistra),<br>
+                 e le caselle tra di essi. Andiamo ad osserare il codice iniziando dalla <span style="font-weight: bold;"> destra</span> 
+                 (nella quale è anche spiegata anche come funziona la probabilità):</p>
+                <img style="border-radius: 15px;" src="foto/Procedura per il movimento a destra.png" alt="movimento a destra">
+        
+                <p style="font-size: 110%;">Osserviamo ora la <span style="font-weight: bold;">sinistra:</span></p>
+                <img style="border-radius: 15px;" src="foto/Procedura di movimento a sinistra.png" alt="movimento a sinistra">
+        
+                <p style="font-size: 110%;">Adesso verso <span style="font-weight: bold;">l'alto</span></p>
+                <img style="border-radius: 15px;" src="foto/Procedura di movimento in alto.png" alt="movimento in alto">
+        
+                <p style="font-size: 110%;">Ed infine <span style="font-weight: bold;">verso il basso</span></p>
+                <img style="border-radius: 15px;" src="Foto/Procedura di movimento in basso.png" alt="movimento in basso">
+        </div>
+        <br>
+        <br>
+
+        <p style="font-size: 110%;">Andiamo ora ad osservare più da vicino la funzione di <span style="font-weight: bold; color: cornflowerblue;">"scelta_movimento_ricorsiva"</span> 
+            per i movimenti della 4<br>l'unica cosa che prende in input dalla funzione<span style="font-weight: bold; color: cornflowerblue;"> "muovi_macchina"</span>
+            è l'array di struct "pos_auto". I valori N, S, E, W invece<br> sono valori di ricorsività, calcolati e richiamati a se stessa,
+            da se stessa...</p>
+        <img style="border-radius: 15px;" src="foto/Funzione movimento ricorsiva (casi base).png" alt="Casi base">
+        <br>
+
+    <p style="font-size: 110%;">... nella sua seconda parte che vediamo qui sotto. Troviamo in questa sezione del codice, la parte in cui
+         è presente la ricorsività in due forme, <br>quella sua, e quella di una nuova funzione ricorsiva che è anche l'ultima che andremo 
+         ad analizzare, la funzione<span style="font-weight: bold; color: cornflowerblue;">"distanza_ricorsiva".</span><br>
+        Questa ultima funzione è utilizzata per due scopi, calcolare la distanza minima tra macchina 4 - altre 3 macchine, e calcolare successivamente <br>
+        le distanze cardinali della 4 e la macchina con distanza minore. La 4 si muoverà in base al risultato di queste operazioni.</p>
+        <img style="border-radius: 15px;" src="Foto/Funzione movimento ricorsiva (ricorsione).png" alt="ricorsività della funzione">
+
+    <div>
+
+        <a href="muovi_macchina.html">
+            <button style="background-color: rgb(95, 55, 99); color: rgb(0, 0, 0); border-radius: 10px; padding: 10px 20px;">
+                 Passa alla <span style="color: cornflowerblue;  text-shadow: 2px 2px #000000; font-weight: bold;">funzione preccedente</span>.</button>
+        </a>
+
+
+        <a href="distanza_ricorsiva.html">
+            <button style="background-color: rgb(95, 55, 99); color: rgb(0, 0, 0); border-radius: 10px; padding: 10px 20px;">
+                 Passa alla <span style="color: cornflowerblue;  text-shadow: 2px 2px #000000; font-weight: bold;">prossima funzione</span>.</button>
+        </a>
+
+    <br>
+
+
+        <a href="funzioni.html">
+            <button style="background-color: rgb(95, 55, 99); color: rgb(0, 0, 0); border-radius: 10px; padding: 10px 20px; "> 
+                Torna al <span style="color: cornflowerblue; text-shadow: 2px 2px #000000; font-weight: bold;">menù delle funzioni</span>.</button>
+        </a>
+
+        <a href="Progetto_autoscontro.html">
+            <button style="background-color: rgb(95, 55, 99); color: rgb(0, 0, 0); border-radius: 10px; padding: 10px 20px; ">
+                 Torna alla pagina iniziale.</button>
+        </a>
+
+    </div>
+</body>
+</html>
+
+
+<p style="font-size: 110%;"><span style="font-weight: bold;"></span></p>

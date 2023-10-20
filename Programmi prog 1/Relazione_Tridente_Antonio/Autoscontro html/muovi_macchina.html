@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Progetto Autoscontri Tridente Antonio(muovi macchina)</title>
+    <style>
+        .immagini {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+    
+        .immagine {
+          margin-bottom: 20px;
+    
+        }
+        body {
+          font-family: "Comic Sans MS", sans-serif;
+          background-repeat: no-repeat;
+          background-position: top left;
+          background-size: cover;
+          background-attachment: fixed;
+          color: rgb(195, 189, 214);
+          text-align: center;
+        }
+      </style>
+</head>
+<body background="foto/Background.png">
+    <div>
+    <h1>Procedura: <span style="color: cornflowerblue; font-weight: bold;">muovi_macchina</span></h1>
+
+    <p style="font-size: 110%;">Questa procedura prende in input 3 elementi elementi. Il primo è l'array delle posizioni (che sará ovviamente modificato),
+         il secondo elemento è invece <br> quello che qui é chiamato "nro_macchina", ma che è passato dalla funzione main come l'indice
+        "i" dell'approccio incrementale nel quale la funzione si trova<br> permettendo di conseguenza, di scegliere il turno della macchina da muovere, 
+        ed infine la grandezza della pista<br> elemento da passare poi alle <span style="color: cornflowerblue; font-weight: bold;"> funzioni movimento</span>.
+        per impedire alle auto di uscire fuori da quest'ultima.</p> <br>
+
+    <img style="border-radius: 15px;" src="foto/Procedura di movimento, introduzione.png" alt="Procedura movimento pt1">
+        
+    </div>
+    <br>
+    <div>
+        <p style="font-size: 110%;"><span style="font-weight: bold;">Durante il caso 0</span>, siamo nella prima iterazione del for,
+            e come spiegato nell'immagine sopra, abbiamo che la macchina 1 <br> ha una proabilitá del movimento a destra e
+            del movimento a sinistra sommate pari al 30%, la macchina 2 per altro proprio nel 30% dei casi<br>
+            esegue un movimento uguale alla macchina 1. Possiamo dunque permetterci di implementare i casi della 2, nei casi della 1<br>
+            uguali per la destra e per la sinistra e diversi per i casi sú e giú (il restante 70% dei casi).</p>
+        <img style="border-radius: 15px;" src="foto/Caso 0 per la 1 e la 2.png" alt="Caso 0 per la 1 e la 2">
+    </div>
+    <br>
+    <div>
+
+        <p style="font-size: 110%;"> <span style="font-weight: bold;">Passiamo ora al caso 2</span>, 
+            che corrisponde alla macchina numero 3. I suoi movimenti sono come quelli della macchina 1, ma con una casistica<br>
+            in percentuali diversa, basterá di conseguenza darle le percentuali di movimento "personali": </p>
+        <img style="border-radius: 15px;" src="foto/Caso 2 per la 3.png" alt="Caso 2 e 3">
+
+    </div>
+    <br>
+    <div>
+        <p style="font-size: 110%;">Siamo dunque arrivati al <span style="font-weight: bold;">caso numero 3</span> per il 
+        movimento della macchina 4: notiamo come in questo caso sia presente una nuova funzione, quella di<br>
+        <span style="color: cornflowerblue; font-weight: bold;">"scelta_movimento_ricorsiva"</span>, essa è presente poiché
+         i suoi movimenti non sono determinati dalla casistica percentuale, ma sono diretti verso<br>
+         la macchina che più le è vicina, ciò viene determinato proprio da questa funzione che in modo ricorsivo calcola le 
+        distanze e restituisce valori diversi<br> in base a se la macchina deve andare a nord, sud, est oppure ovest.</p>
+
+        <img style="border-radius: 15px;" src="foto/Caso 3 per la 4.png" alt="Caso 3 per la 4">
+
+    </div>
+    <p>Qui si conclude questa funzione, ora si può scegliere se andare alla prossima che è il calcolo della distanza in modo ricorsivo,<br>
+         oppure se andare prima a guardare le <span style="color: cornflowerblue; font-weight: bold;">funzioni "movimento"</span>.</p>
+    <div>
+
+
+
+        <a href="Stampa_pista.html">
+            <button style="background-color: rgb(95, 55, 99); color: rgb(0, 0, 0); border-radius: 10px; padding: 10px 20px;">
+                 Passa alla <span style="color: cornflowerblue;  text-shadow: 2px 2px #000000; font-weight: bold;">funzione preccedente</span>.</button>
+        </a>
+
+        <a href="movimenti_direzionali.html">
+            <button style="background-color: rgb(95, 55, 99); color: rgb(0, 0, 0); border-radius: 10px; padding: 10px 20px; "> 
+                Vai alle procedure di  <span style="color: cornflowerblue; text-shadow: 2px 2px #000000; font-weight: bold;">movimenti direzionali</span>.</button>
+        </a>
+
+        <a href="distanza_ricorsiva.html">
+            <button style="background-color: rgb(95, 55, 99); color: rgb(0, 0, 0); border-radius: 10px; padding: 10px 20px; ">
+                 Passa alla <span style="color: cornflowerblue; text-shadow: 2px 2px #000000; font-weight: bold;">prossima funzione</span>.</button>
+        </a>
+
+    <br>
+
+
+        <a href="funzioni.html">
+            <button style="background-color: rgb(95, 55, 99); color: rgb(0, 0, 0); border-radius: 10px; padding: 10px 20px; "> 
+                Torna al <span style="color: cornflowerblue; text-shadow: 2px 2px #000000; font-weight: bold;">menù delle funzioni</span>.</button>
+        </a>
+
+        <a href="Progetto_autoscontro.html">
+            <button style="background-color: rgb(95, 55, 99); color: rgb(0, 0, 0); border-radius: 10px; padding: 10px 20px; ">
+                 Torna alla pagina iniziale.</button>
+        </a>
+
+    </div>
+</body>
+</html>

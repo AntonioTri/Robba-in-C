@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Progetto Autoscontri Tridente Antonio</title>
+  <style>
+    .immagini {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .immagine {
+      margin-bottom: 20px;
+
+    }
+    body {
+      font-family: "Comic Sans MS", sans-serif;
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: cover;
+      background-attachment: fixed;
+      color: rgb(210, 205, 228);
+      text-align: center;
+      
+    }
+  </style>
+</head>
+<body background="Foto/Background.png">
+  <h1>Progetto Prog1 e Lab. Prog1:</h1>
+  <h3>(Tridente Antonio, nro. matricola: 0124002692)</h3>
+  <br>
+
+  <div>
+    <p>Il progetto si pone come obbiettivo quello di simulare un autoscontro su una pista di grandezza 8 con all'interno 4 macchine,<br>
+        ognuna delle quali ha la possibilità di muoversi in alto/basso/destra/sinistra tramite criteri personali come <br>
+        percentuali, confronti o "molta voglia di finire il round" ;). <br>
+        <br>
+        Andiamo dunque ad analizzare passo dopo passo, il comportamento del programma. Iniziamo col guardare <br>
+        le librerie, i valori ed i record utilizzati: <br>
+        </p>  
+  </div>
+
+   <div class="immagine">
+      <img src="foto/librerie&co.png" alt="Struct e prototipi" style="border-radius: 10px;">
+      <p>Come possiamo osservare vi troviamo la libreria "stdio" per funzioni come le printf(), scanf() o i cicli iterativi, la libreria "math", <br>
+         per l'utilizzo di strumenti utili al fine di formule matematiche come il calcolo delle distanze, e per ultime (non di importanza) la "stdlib" e la "time"<br>
+         così da poter utilizzare principalmente la funzione rand() e la funzione time() per i calcoli delle percentuali e dei numeri pseudocasuali.</p>
+        <br>
+    </div> 
+
+    <div class="immagine">
+      <p>Iniziamo l'esplorazione del vero e proprio codice, scritto in linguaggio C, da quì, dove troviamo la funzione "main" con le dichiarazioni <br>
+        di tutti i valori di cui il programma necessita (analizzeremo le singole funzioni più avanti):</p>
+      <img src="Foto/Funzione main.png" alt="Immagine 1" style="border-radius: 10px;">     
+    </div>
+
+    <div class="immagine">
+      <p><br> Sempre proseguendo nella funzione main, dopo il setup iniziale del programma, inizia il cuore pulsante della simulazione, un semplice ciclo while <br>
+              nel quale avvengono la sequenze di operazioni per muoere le auto e rimostrare la pista con le loro posizioni cambiate. Il minuscolo ciclo while <br>
+              all'inizio permette all'utente di proseguire alla prossima iterazione a sua scelta tramite la pressione del tasto "invio":</p>
+      <img src="Foto/Esecuzione del while.png" alt="Immagine 2" style="border-radius: 10px;">
+
+    </div>
+
+    <div class="immagine">
+      <p><br> Quando la variabile "scontro", viene impostata al valore 1 per l'appunto, nel caso di scontro tra due auto, il while si conclude <br>
+              e vengono mostrate a schermo le coordinate del punto di scontro ed il turno in cui esso è accaduto (il turno dello scontro è registrato nella variabile z):</p>
+      <img src="Foto/Fine del main e del programma.png" alt="Immagine 3" style="border-radius: 10px;">
+
+    </div>
+     
+    <div>
+      <a href="Funzioni.html">
+          <button style="background-color: rgb(180, 173, 190); color: rgb(0, 0, 0); border-radius: 5px; padding: 10px 20px; font-weight: bold;"> Clicca qui per la pagina delle funzioni. </button>
+      </a> 
+      <a href="Simulazioni.html">
+        <button style="background-color: rgb(180, 173, 190); color: rgb(0, 0, 0); border-radius: 5px; padding: 10px 20px; font-weight: bold;"> Clicca qui per le simulazioni. </button>
+    </a> 
+    <a href="../index.html">
+      <button style="background-color: rgb(180, 173, 190); color: rgb(0, 0, 0); border-radius: 5px; padding: 10px 20px; font-weight: bold;">Exit</button>
+    </a>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+
+</body>
+</html>
